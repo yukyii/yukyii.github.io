@@ -31,6 +31,9 @@ export function HomePage({ activeSection }: HomePageProps) {
         return;
       }
 
+      const NAVBAR_HEIGHT_BUFFER = 85;
+      if (e.clientY < NAVBAR_HEIGHT_BUFFER) return;
+
       // Check if mouse is within the home section bounds
       if (homeRef.current) {
         const rect = homeRef.current.getBoundingClientRect();
