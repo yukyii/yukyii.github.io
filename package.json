@@ -57,9 +57,9 @@
             "vite": "^6.3.6"
       },
       "scripts": {
-            "predeploy": "npm run build",
-            "deploy": "gh-pages -b main -d dist",
             "dev": "vite",
-            "build": "vite build"
+            "build": "vite build",
+            "lint": "eslint .",
+            "preview": "vite preview"
       }
 }
