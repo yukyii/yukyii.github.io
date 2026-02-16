@@ -17,7 +17,7 @@ export function HomePage({ activeSection }: HomePageProps) {
   const lastPixelPos = useRef({ x: 0, y: 0 });
   const homeRef = useRef<HTMLDivElement>(null);
 
-  Function to generate random RGB color
+  // Function to generate random RGB color
   const getRandomColor = () => {
     const r = Math.floor(Math.random() * 100) + 150; // 150-249
     const g = Math.floor(Math.random() * 100) + 150;
