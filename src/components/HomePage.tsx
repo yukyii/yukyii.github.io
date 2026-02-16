@@ -17,58 +17,58 @@ export function HomePage({ activeSection }: HomePageProps) {
   const lastPixelPos = useRef({ x: 0, y: 0 });
   const homeRef = useRef<HTMLDivElement>(null);
 
-  // Function to generate random RGB color
-  // const getRandomColor = () => {
-  //   const r = Math.floor(Math.random() * 100) + 150; // 150-249
-  //   const g = Math.floor(Math.random() * 100) + 150;
-  //   const b = Math.floor(Math.random() * 100) + 150;
-  //   return `rgb(${r}, ${g}, ${b})`;
-  // };
+  Function to generate random RGB color
+  const getRandomColor = () => {
+    const r = Math.floor(Math.random() * 100) + 150; // 150-249
+    const g = Math.floor(Math.random() * 100) + 150;
+    const b = Math.floor(Math.random() * 100) + 150;
+    return `rgb(${r}, ${g}, ${b})`;
+  };
 
-  // useEffect(() => {
-  //   const handleMouseMove = (e: MouseEvent) => {
-  //     if (activeSection !== 'Home') {
-  //       return;
-  //     }
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      if (activeSection !== 'Home') {
+        return;
+      }
 
-  //     // Check if mouse is within the home section bounds
-  //     if (homeRef.current) {
-  //       const rect = homeRef.current.getBoundingClientRect();
-  //       const isWithinHome = (
-  //         e.clientX >= rect.left &&
-  //         e.clientX <= rect.right &&
-  //         e.clientY >= rect.top &&
-  //         e.clientY <= rect.bottom
-  //       );
+      // Check if mouse is within the home section bounds
+      if (homeRef.current) {
+        const rect = homeRef.current.getBoundingClientRect();
+        const isWithinHome = (
+          e.clientX >= rect.left &&
+          e.clientX <= rect.right &&
+          e.clientY >= rect.top &&
+          e.clientY <= rect.bottom
+        );
         
-  //       if (!isWithinHome) {
-  //         return;
-  //       }
-  //     }
+        if (!isWithinHome) {
+          return;
+        }
+      }
 
-  //     const currentX = e.clientX;
-  //     const currentY = e.clientY;
+      const currentX = e.clientX;
+      const currentY = e.clientY;
       
-  //     // Calculate distance from last pixel position
-  //     const distance = Math.sqrt(
-  //       Math.pow(currentX - lastPixelPos.current.x, 2) + 
-  //       Math.pow(currentY - lastPixelPos.current.y, 2)
-  //     );
+      // Calculate distance from last pixel position
+      const distance = Math.sqrt(
+        Math.pow(currentX - lastPixelPos.current.x, 2) + 
+        Math.pow(currentY - lastPixelPos.current.y, 2)
+      );
       
-  //     // Add new pixel if mouse has moved at least 8 pixels from last pixel
-  //     if (distance > 8) {
-  //       const newPixel: TrailPixel = {
-  //         id: Date.now() + Math.random(),
-  //         x: currentX,
-  //         y: currentY,
-  //         opacity: 1,
-  //         color: getRandomColor()
-  //       };
+      // Add new pixel if mouse has moved at least 8 pixels from last pixel
+      if (distance > 8) {
+        const newPixel: TrailPixel = {
+          id: Date.now() + Math.random(),
+          x: currentX,
+          y: currentY,
+          opacity: 1,
+          color: getRandomColor()
+        };
         
-  //       setTrailPixels(prev => [...prev.slice(-30), newPixel]); // Keep last 30 pixels
-  //       lastPixelPos.current = { x: currentX, y: currentY };
-  //     }
-  //   };
+        setTrailPixels(prev => [...prev.slice(-30), newPixel]); // Keep last 30 pixels
+        lastPixelPos.current = { x: currentX, y: currentY };
+      }
+    };
 
     window.addEventListener('mousemove', handleMouseMove);
     return () => window.removeEventListener('mousemove', handleMouseMove);
@@ -93,25 +93,25 @@ export function HomePage({ activeSection }: HomePageProps) {
   }, [activeSection]);
 
   return (
-    // <div ref={homeRef} className="min-h-screen pt-20 px-6 overflow-hidden relative">
-      // {/* Trail pixels */}
-      // {trailPixels.map((pixel) => (
-      //   <div
-      //     key={pixel.id}
-      //     className="trail"
-      //     style={{
-      //       position: 'fixed',
-      //       left: pixel.x - 25, // Center the 50px pixel
-      //       top: pixel.y - 25,
-      //       opacity: pixel.opacity,
-      //       width: '50px',
-      //       height: '50px',
-      //       backgroundColor: pixel.color, // Use random color
-      //       zIndex: 50,
-      //       pointerEvents: 'none',
-      //     }}
-      //   />
-      // ))}
+    <div ref={homeRef} className="min-h-screen pt-20 px-6 overflow-hidden relative">
+      {/* Trail pixels */}
+      {trailPixels.map((pixel) => (
+        <div
+          key={pixel.id}
+          className="trail"
+          style={{
+            position: 'fixed',
+            left: pixel.x - 25, // Center the 50px pixel
+            top: pixel.y - 25,
+            opacity: pixel.opacity,
+            width: '50px',
+            height: '50px',
+            backgroundColor: pixel.color, // Use random color
+            zIndex: 50,
+            pointerEvents: 'none',
+          }}
+        />
+      ))}
 
       <div className="max-w-6xl mx-auto relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
