@@ -25,50 +25,50 @@ export function HomePage({ activeSection }: HomePageProps) {
   //   return `rgb(${r}, ${g}, ${b})`;
   // };
 
-  useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
-      if (activeSection !== 'Home') {
-        return;
-      }
+  // useEffect(() => {
+  //   const handleMouseMove = (e: MouseEvent) => {
+  //     if (activeSection !== 'Home') {
+  //       return;
+  //     }
 
-      // Check if mouse is within the home section bounds
-      if (homeRef.current) {
-        const rect = homeRef.current.getBoundingClientRect();
-        const isWithinHome = (
-          e.clientX >= rect.left &&
-          e.clientX <= rect.right &&
-          e.clientY >= rect.top &&
-          e.clientY <= rect.bottom
-        );
+  //     // Check if mouse is within the home section bounds
+  //     if (homeRef.current) {
+  //       const rect = homeRef.current.getBoundingClientRect();
+  //       const isWithinHome = (
+  //         e.clientX >= rect.left &&
+  //         e.clientX <= rect.right &&
+  //         e.clientY >= rect.top &&
+  //         e.clientY <= rect.bottom
+  //       );
         
-        if (!isWithinHome) {
-          return;
-        }
-      }
+  //       if (!isWithinHome) {
+  //         return;
+  //       }
+  //     }
 
-      const currentX = e.clientX;
-      const currentY = e.clientY;
+  //     const currentX = e.clientX;
+  //     const currentY = e.clientY;
       
-      // Calculate distance from last pixel position
-      const distance = Math.sqrt(
-        Math.pow(currentX - lastPixelPos.current.x, 2) + 
-        Math.pow(currentY - lastPixelPos.current.y, 2)
-      );
+  //     // Calculate distance from last pixel position
+  //     const distance = Math.sqrt(
+  //       Math.pow(currentX - lastPixelPos.current.x, 2) + 
+  //       Math.pow(currentY - lastPixelPos.current.y, 2)
+  //     );
       
-      // Add new pixel if mouse has moved at least 8 pixels from last pixel
-      if (distance > 8) {
-        const newPixel: TrailPixel = {
-          id: Date.now() + Math.random(),
-          x: currentX,
-          y: currentY,
-          opacity: 1,
-          color: getRandomColor()
-        };
+  //     // Add new pixel if mouse has moved at least 8 pixels from last pixel
+  //     if (distance > 8) {
+  //       const newPixel: TrailPixel = {
+  //         id: Date.now() + Math.random(),
+  //         x: currentX,
+  //         y: currentY,
+  //         opacity: 1,
+  //         color: getRandomColor()
+  //       };
         
-        setTrailPixels(prev => [...prev.slice(-30), newPixel]); // Keep last 30 pixels
-        lastPixelPos.current = { x: currentX, y: currentY };
-      }
-    };
+  //       setTrailPixels(prev => [...prev.slice(-30), newPixel]); // Keep last 30 pixels
+  //       lastPixelPos.current = { x: currentX, y: currentY };
+  //     }
+  //   };
 
     window.addEventListener('mousemove', handleMouseMove);
     return () => window.removeEventListener('mousemove', handleMouseMove);
