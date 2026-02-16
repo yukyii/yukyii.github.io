@@ -18,12 +18,12 @@ export function HomePage({ activeSection }: HomePageProps) {
   const homeRef = useRef<HTMLDivElement>(null);
 
   // Function to generate random RGB color
-  const getRandomColor = () => {
-    const r = Math.floor(Math.random() * 100) + 150; // 150-249
-    const g = Math.floor(Math.random() * 100) + 150;
-    const b = Math.floor(Math.random() * 100) + 150;
-    return `rgb(${r}, ${g}, ${b})`;
-  };
+  // const getRandomColor = () => {
+  //   const r = Math.floor(Math.random() * 100) + 150; // 150-249
+  //   const g = Math.floor(Math.random() * 100) + 150;
+  //   const b = Math.floor(Math.random() * 100) + 150;
+  //   return `rgb(${r}, ${g}, ${b})`;
+  // };
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
