@@ -97,24 +97,26 @@ export function HomePage({ activeSection }: HomePageProps) {
 
   return (
     <div ref={homeRef} className="min-h-screen pt-20 px-6 overflow-hidden relative">
-      {/* Trail pixels */}
-      {trailPixels.map((pixel) => (
-        <div
-          key={pixel.id}
-          className="trail"
-          style={{
-            position: 'fixed',
-            left: pixel.x - 25, // Center the 50px pixel
-            top: pixel.y - 25,
-            opacity: pixel.opacity,
-            width: '50px',
-            height: '50px',
-            backgroundColor: pixel.color, // Use random color
-            zIndex: 50,
-            pointerEvents: 'none',
-          }}
-        />
-      ))}
+      <div className="pointer-events-none fixed inset-0 z-0">
+        {/* Trail pixels */}
+        {trailPixels.map((pixel) => (
+          <div
+            key={pixel.id}
+            className="trail"
+            style={{
+              position: 'fixed',
+              left: pixel.x - 25, // Center the 50px pixel
+              top: pixel.y - 25,
+              opacity: pixel.opacity,
+              width: '50px',
+              height: '50px',
+              backgroundColor: pixel.color, // Use random color
+              zIndex: 50,
+              pointerEvents: 'none',
+            }}
+          />
+        ))}
+      </div>
 
       <div className="max-w-6xl mx-auto relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
