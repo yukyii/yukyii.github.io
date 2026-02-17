@@ -78,7 +78,7 @@ export default function Projects({ activeSection, onMouseEnterFooter, onMouseLea
       article: "Vibecode",
       excerpt: "Since I was a kid, one of my favourite things to do was to make cards for my loved ones—it has always been a wonderfully tactile, intuitive, and serendipitous experience for me. This website is my attempt at digitizing the handmade. Cobble together random materials, sprinkle some doodles around, and send a mouse-made card to your special someone!",
       imageSrc: "/imgs/cardsbyhand.png",
-      link: "https://wwoc-2025.github.io/wwoc-health/"
+      link: "https://cardsbyhand.vercel.app/"
     },
     {
       title: "Units of Measurement",
