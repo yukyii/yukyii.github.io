@@ -3,8 +3,8 @@ import { Navigation } from './components/Navigation';
 import { HomePage } from './components/HomePage';
 import { Resume } from './components/Resume';
 import { About } from './components/About';
-import { Projects } from './components/Projects';
-import { Footer } from './components/Footer';
+import Projects from './components/Projects';
+import Footer from './components/Footer';
 
 export default function App() {
   const [activeSection, setActiveSection] = useState('Home');

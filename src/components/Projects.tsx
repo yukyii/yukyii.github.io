@@ -3,9 +3,17 @@ import { useState } from 'react';
 interface ContentRendererProps {
   content: string;
   contentType: 'text' | 'pdf' | 'link' | 'video';
+  onMouseEnterFooter?: () => void;
+  onMouseLeaveFooter?: () => void;
 }
 
-const ContentRenderer: React.FC<ContentRendererProps> = ({ content, contentType }) => {
+interface ProjectsProps {
+  activeSection: string;
+  onMouseEnterFooter: () => void;
+  onMouseLeaveFooter: () => void;
+}
+
+const ContentRenderer: React.FC<ContentRendererProps> = ({ content, contentType, onMouseEnterFooter, onMouseLeaveFooter }) => {
   switch (contentType) {
     case 'pdf':
       return (
@@ -48,7 +56,7 @@ const ContentRenderer: React.FC<ContentRendererProps> = ({ content, contentType 
   }
 };
 
-export function Projects() {
+export default function Projects({ activeSection, onMouseEnterFooter, onMouseLeaveFooter }: ProjectsProps) {
   const [expandedItems, setExpandedItems] = useState<Set<number>>(new Set());
 
   type Project = {
@@ -232,6 +240,8 @@ export function Projects() {
                         <ContentRenderer 
                           content={project.content} 
                           contentType={project.contentType} 
+                          onMouseEnterFooter={onMouseEnterFooter}
+                          onMouseLeaveFooter={onMouseLeaveFooter}
                         />
                       )}
                     </div>

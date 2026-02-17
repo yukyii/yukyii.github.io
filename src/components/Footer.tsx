@@ -7,7 +7,7 @@ interface FooterProps {
   onMouseLeaveFooter: () => void;
 }
 
-export function Footer({ activeSection, onMouseEnterFooter, onMouseLeaveFooter }: FooterProps) {
+export default function Footer({ activeSection, onMouseEnterFooter, onMouseLeaveFooter }: FooterProps) {
   const icons = ['⊹', '₊', '⟡', '⋆', '.˚'];
   const [trail, setTrail] = useState<
     { x: number; y: number; key: number; icon: string }[]
