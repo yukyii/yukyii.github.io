@@ -73,7 +73,7 @@ export default function Projects({ activeSection, onMouseEnterFooter, onMouseLea
 
   const Projects = [
     {
-      title: "Units",
+      title: "Units of Measurement",
       date: "Spring 2025",
       article: "Design + Theory",
       excerpt: "Units of Measurement builds on Crawford's Atlas of AI to reimagine the brand logos of four names in Big Tech. Crawford explored AI development and impact by identifying links across a range of systems, using experiences from daily life as context. In a similar vein, the redesigned logos make use of visual art to express the nuance of supply chains. Beyond this, the series focuses on the urban consumer, exploring the impact of marketing on the conceptualization of use—and prospective uses—of current technologies.",

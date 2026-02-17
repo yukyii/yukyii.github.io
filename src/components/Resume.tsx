@@ -9,24 +9,17 @@ export function Resume() {
 
   const experiences = [
     {
+      title: "UXR Research Assistant",
+      company: "Computer-Enabled Abilities Laboratory (CEAL), Columbia University",
+      period: "Oct. 2025 - Present",
+      description: "Designing methods for evaluation and development of educational games involving usability studies, interviews and iterative prototype testing.",
+      technologies: ["Jira"]
+    },
+    {
       title: "Brand Strategy Intern",
       company: "Design Bridge and Partners (WPP)",
       period: "Jun. 2025 - Aug. 2025",
       description: "Informed brand positioning to drive consumer acquisition for CPG brands (e.g. Kenvue’s Johnson’s Baby, Heineken, Don Julio, Tyson) through market research across 90 brands. Delivered product differentiation strategies by writing creative briefs informed by semiotics, packaging design and cultural trends.",
-      technologies: ["Placeholder"]
-    },
-    {
-      title: "Multicultural Advertising Intern Program Fellow",
-      company: "4A's Foundation",
-      period: "Jun. 2025 - Aug. 2025",
-      description: "Selected for a 22-week hybrid fellowship that develops talents in the marketing and advertising industry. Won 2nd place for Disney Experiences' campaign pitch as part of team After Ten Creative.",
-      technologies: ["Placeholder"]
-    },
-    {
-      title: "HCI Researcher",
-      company: "Barnard College",
-      period: "May 2024 - Dec. 2024",
-      description: "Designed and presented simulations built on Godot Engine 4.3 to explore haptic feedback impact on user agency.",
       technologies: ["Placeholder"]
     },
     {
@@ -41,6 +34,20 @@ export function Resume() {
       company: "Columbia University Singapore Students' Association",
       period: "May 2023 - Present",
       description: "Accomplished organizational transformation by scaling event capacity from 40 to 90 attendees (10+ events annually) and saw 150% social media growth. Scaled organizational reach by 300%, expanding from 1 to 5+ corporate collaborations.",
+      technologies: ["Placeholder"]
+    },
+    {
+      title: "Multicultural Advertising Intern Program Fellow",
+      company: "4A's Foundation",
+      period: "Jun. 2025 - Aug. 2025",
+      description: "Selected for a 22-week hybrid fellowship that develops talents in the marketing and advertising industry. Won 2nd place for Disney Experiences' campaign pitch as part of team After Ten Creative.",
+      technologies: ["Placeholder"]
+    },
+    {
+      title: "HCI Researcher",
+      company: "Barnard College",
+      period: "May 2024 - Dec. 2024",
+      description: "Designed and presented simulations built on Godot Engine 4.3 to explore haptic feedback impact on user agency.",
       technologies: ["Placeholder"]
     },
     {
