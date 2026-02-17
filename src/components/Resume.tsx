@@ -5,7 +5,7 @@ export function Resume() {
   const tabsRef = useRef<HTMLDivElement>(null);
   const [underlineStyle, setUnderlineStyle] = useState({ width: 0, left: 0, opacity: 0 });
 
-  const tabs = ['Experience', 'Education'];
+  const tabs = ['Experience', 'Education', 'Courses'];
 
   const experiences = [
     {
@@ -71,7 +71,64 @@ export function Resume() {
       degree: "Cognitive Science and Sociology",
       school: "Barnard College, Columbia University",
       period: "Expected May 2026",
-      details: "Relevant coursework: User Interface Design, Digital Inequalities, Methods for Social Research, Artificial Intelligence (Fall 2025)"
+      details: "See 'Courses' and the 'Projects' tab for information on selected coursework and projects."
+    }
+  ];
+
+  const courses = [
+    {
+      title: "Human-Computer Interaction",
+      code: "COMS6178E",
+      period: "Spring 2026",
+      details: "We read, present, and discuss research papers that cover the foundations and the frontiers of HCI, and produce an original HCI research project. My project's focus is on malleable interfaces."
+    },
+    {
+      title: "Human-Centered Design and Innovation",
+      code: "IEME4200E",
+      period: "Spring 2026",
+      details: "Through hands-on projects, we learn the design of prototypes, complex systems of products and services, and design of business."
+    },
+    {
+      title: "Marketing Management",
+      code: "BUSI3021UN",
+      period: "Spring 2026",
+      details: "Through real-world case studies, a marketing plan project and lectures, we learn fundamental marketing concepts and their application by business and non-business organizations."
+    },
+    {
+      title: "Principles of Innovation and Entrepreneurship",
+      code: "COMS4460W",
+      period: "Spring 2026",
+      details: "Team project centered course focused on principles of planning, creating, and growing a technology venture."
+    },
+    {
+      title: "Foundations of Entrepreneurship",
+      code: "BUSI4518GU",
+      period: "Spring 2026",
+      details: "Lecture-based content, case discussions of existing companies, and group work to develop an early-stage idea and pitch it to a panel of investors."
+    },
+    {
+      title: "Machine Learning for Social Science",
+      code: "QMSS5073GR",
+      period: "Fall 2025",
+      details: "Overview of ML applications in various domains. Includes data exploration, visualization in matplotlib, preprocessing, feature engineering, supervised and unsupervised learning and more."
+    },
+    {
+      title: "Artificial Intelligence",
+      code: "COMS4701W",
+      period: "Fall 2025",
+      details: "Provides a broad understanding of the basic techniques for building intelligent computer systems. Topics include state-space problem representations, problem reduction, game playing and more."
+    },
+    {
+      title: "Digital Inequalities",
+      code: "SOCI3015BC",
+      period: "Fall 2025",
+      details: "Through field work and discussions, we analyzed the ways in which social inequalities are produced and reinforced within the digital world."
+    },
+    {
+      title: "Methods for Social Research",
+      code: "SOCI3010UN",
+      period: "Spring 2025",
+      details: "Learned to conduct critical social research methods, from data collection to analysis and evaluation of research."
     }
   ];
 
@@ -128,7 +185,7 @@ export function Resume() {
           ))}
         </div>
       );
-    } else {
+    } else if (activeTab === 'Education'){
       return (
         <div className="space-y-6">
           {education.map((edu, index) => (
@@ -144,6 +201,27 @@ export function Resume() {
                 </div>
                 
                 <p className="text-muted-foreground">{edu.details}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      );
+    } else {
+      return (
+        <div className="space-y-6">
+          {courses.map((course, index) => (
+            <div key={index} className="border-2 border-border p-6 bg-card">
+              <div className="space-y-3">
+                <div className="space-y-1">
+                  <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
+                    <h3 className="text-xl font-medium">{course.title}</h3>
+                    <span className="text-muted-foreground font-medium font-ibm-mono">{course.period}</span>
+                  </div>
+                  
+                  <h4 className="text-lg text-primary font-ibm-mono">{course.code}</h4>
+                </div>
+                
+                <p className="text-muted-foreground">{course.details}</p>
               </div>
             </div>
           ))}
