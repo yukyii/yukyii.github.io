@@ -66,7 +66,7 @@
             "lint": "eslint .",
             "preview": "vite preview",
             "deploy": "gh-pages -d dist",
-            "build:gh": "vite build --base=/yukyi-website/ --outDir dist",
+            "build:gh": "vite build --outDir dist",
             "deploy:gh": "npm run build:gh && gh-pages -d dist"
       }
 }
