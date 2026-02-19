@@ -6,10 +6,7 @@
   // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  /**
-   * For Vercel: Use '/' (the root).
-   * For GitHub Pages: Use '/your-repo-name/'.
-   * Using './' often works for both as a relative path!
-   */
-  base: '/', 
+  build: {
+    outDir: 'dist', // Ensure this matches the folder in the script above
+  }, 
 })
