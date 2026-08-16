@@ -155,6 +155,7 @@ export default function Projects({ activeSection, onMouseEnterFooter, onMouseLea
       date: "2021",
       article: "Peer-reviewed Paper",
       excerpt: "Led end-to-end development of a game teaching cultural and environmental history, which was incorporated into a compulsory course in the enhanced Postgraduate Diploma in Education program at Singapore's Nanyang Technological University.",
+      imageSrc: "/imgs/yunnangarden.png",
       link: "https://ieeexplore.ieee.org/document/9459378"
     }
   ];
