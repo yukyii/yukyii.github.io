@@ -149,6 +149,13 @@ export default function Projects({ activeSection, onMouseEnterFooter, onMouseLea
       excerpt: "A satirical film borne from my imagination about what could happen if we did not care about assigning moral status to AI and other sophisticated machines.",
       imageSrc: "/imgs/justprogramming.png",
       link: "https://youtu.be/AVxZSSJfgoY"
+    },
+    {
+      title: "Communal Spaces as Ludic Resources of Learning with AR and Board Games",
+      date: "2021",
+      article: "Peer-reviewed Paper",
+      excerpt: "Led end-to-end development of a game teaching cultural and environmental history, which was incorporated into a compulsory course in the enhanced Postgraduate Diploma in Education program at Singapore's Nanyang Technological University.",
+      link: "https://ieeexplore.ieee.org/document/9459378"
     }
   ];
 
