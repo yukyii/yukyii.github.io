@@ -9,10 +9,17 @@ export function Resume() {
 
   const experiences = [
     {
+      title: "Research Assistant",
+      company: "Columbia Business School, Marketing and Digital Twins",
+      period: "Nov. 2025 - Present",
+      description: "Developing AI tools for marketing research and conducting behavioral science and digital twins research.",
+      technologies: ["Jira"]
+    },
+    {
       title: "UXR Research Assistant",
       company: "Computer-Enabled Abilities Laboratory (CEAL), Columbia University",
-      period: "Oct. 2025 - Present",
-      description: "Designing methods for evaluation and development of educational games involving usability studies, interviews and iterative prototype testing.",
+      period: "Oct. 2025 - May 2026",
+      description: "Designed methods for evaluation and development of educational games involving usability studies, interviews and iterative prototype testing.",
       technologies: ["Jira"]
     },
     {
@@ -26,7 +33,7 @@ export function Resume() {
       title: "Vice-President",
       company: "Columbia University Gaming Group",
       period: "Sep. 2024 - Present",
-      description: "Delivered industry mentorship for 70+ aspiring game developers by engaging Xbox professionals as judges for 17 competing teams. Achieved 100% year-over-year funding growth for 150+ member organization by negotiating strategic partnerships. Pioneered Women in Gaming industry panel involving PlayStation and Activision Blizzard leaders, attracting 40+ participants.",
+      description: "Founded an annual student-led game development incubator. Delivered industry mentorship for 70+ aspiring game developers by engaging Xbox professionals as judges for 17 competing teams in annual game jam. Achieved 100% year-over-year funding growth for 150+ member organization by negotiating strategic partnerships. Pioneered Women in Gaming industry panel involving PlayStation and Activision Blizzard leaders, attracting 40+ participants.",
       technologies: ["Placeholder"]
     },
     {
@@ -70,7 +77,7 @@ export function Resume() {
     {
       degree: "Cognitive Science and Sociology",
       school: "Barnard College, Columbia University",
-      period: "Expected May 2026",
+      period: "May 2026",
       details: "See 'Courses' and the 'Projects' tab for information on selected coursework and projects."
     }
   ];

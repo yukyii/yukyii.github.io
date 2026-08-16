@@ -73,13 +73,20 @@ export default function Projects({ activeSection, onMouseEnterFooter, onMouseLea
 
   const Projects = [
     {
-      title: "Cards by Hand",
+      title: "Malleable Interfaces",
       date: "Spring 2026",
-      article: "Vibecode",
-      excerpt: "Since I was a kid, one of my favourite things to do was to make cards for my loved ones—it has always been a wonderfully tactile, intuitive, and serendipitous experience for me. This website is my attempt at digitizing the handmade. Cobble together random materials, sprinkle some doodles around, and send a mouse-made card to your special someone!",
-      imageSrc: "/imgs/cardsbyhand.png",
-      link: "https://cardsbyhand.vercel.app/"
+      article: "HCI Research",
+      excerpt: "Malleable interfaces promise increased user agency by allowing individuals to reshape their digital environments. However, transitioning from a passive consumer to an active designer can be a difficult mental adjustment. This study explores if dynamic configuration components can effectively ameliorate this friction. I co-designed and ran a controlled usability study across 3 interface conditions, combining moderated sessions, behavioral telemetry, and post-task surveys to measure usability, agency, and cognitive load. Synthesized findings into design recommendations, showing intuitive state-management controls (saved layouts) eased customization friction and produced the highest task accuracy and perceived agency across conditions."
+      // link: "https://cardsbyhand.vercel.app/"
     },
+    // {
+    //   title: "Cards by Hand",
+    //   date: "Spring 2026",
+    //   article: "Personal",
+    //   excerpt: "Since I was a kid, one of my favourite things to do was to make cards for my loved ones—it has always been a wonderfully tactile, intuitive, and serendipitous experience for me. This website is my attempt at digitizing the handmade. Cobble together random materials, sprinkle some doodles around, and send a mouse-made card to your special someone!",
+    //   imageSrc: "/imgs/cardsbyhand.png",
+    //   link: "https://cardsbyhand.vercel.app/"
+    // },
     {
       title: "Units of Measurement",
       date: "Spring 2025",
